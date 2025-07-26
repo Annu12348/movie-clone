@@ -11,7 +11,7 @@ import { RiMovie2Line } from "react-icons/ri";
 const SizeNavigation = () => {
 
   return (
-    <div className="w-[20%] h-full border-r-1 p-10 border-zinc-400 ">
+    <div className="w-[20%] md:block hidden h-full border-r-1 p-10 border-zinc-400 ">
       <h1 className="text-white flex items-center gap-2 text-2xl leading-none font-semibold tracking-tight">
         <span className="text-blue-400">
           <TbDeviceTvFilled />

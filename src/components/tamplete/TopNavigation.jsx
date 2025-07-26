@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
 import noimage from "/noimage.webp"
+import { FiMenu } from "react-icons/fi";
 
 const TopNavigation = () => {
   const [query, setquery] = useState("");
@@ -23,7 +24,10 @@ const TopNavigation = () => {
   }, [query]);
 
   return (
-    <div className=" ml-[15%] h-[10vh]  relative flex items-center gap-4 justify-cente w-full">
+    <div className="md:my-0 my-1 ml-11   md:ml-[15%] h-[10vh]  relative flex items-center gap-4 justify-cente w-full">
+    <span className="absolute -left-9  text-xl md:hidden">
+    <FiMenu />
+    </span>
       <span className="text-[24px]">
         <CiSearch />
       </span>
@@ -32,10 +36,10 @@ const TopNavigation = () => {
         onChange={(e) => setquery(e.target.value)}
         type="text"
         placeholder="Some Anything..."
-        className="border w-[50%] p-3.5 rounded font-semibold outline-none border-zinc-800 "
+        className="border w-[65%] md:w-[50%] p-2 md:p-3.5 rounded font-semibold outline-none border-zinc-800 "
       />
       {query.length > 0 && (
-        <span onClick={() => setquery("")} className="text-[24px] cursor-pointer ">
+        <span onClick={() => setquery("")} className="text-[24px]  cursor-pointer ">
           <IoMdClose />
         </span>
       )}

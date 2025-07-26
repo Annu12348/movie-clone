@@ -42,10 +42,10 @@ const Home = () => {
   return wallpaper && tranding ? (
     <div className="w-full flex h-screen overflow-x-hidden  ">
       <SizeNavigation />
-      <div className="text-white  w-full h-screen overflow-y-auto overflow-x-hidden">
+      <div className="text-white md:p-0 p-2  w-full h-screen overflow-y-auto overflow-x-hidden">
         <TopNavigation />
         <Header data={wallpaper} />
-        <div className="flex items-center justify-between px-3 ">
+        <div className="flex items-center justify-between md:my-0 my-4 md:px-3 ">
           <h1 className="text-2xl capitalize font-bold text-zinc-500 ">
             tranding
           </h1>

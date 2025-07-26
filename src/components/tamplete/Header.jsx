@@ -15,16 +15,17 @@ const Header = ({ data }) => {
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full h-[50%] bg-zinc-200 p-10 flex flex-col justify-end  "
+      className="w-full h-[30%] md:rounded-none rounded-lg md:h-[50%] bg-zinc-200 p-2 md:p-10 flex flex-col justify-end  "
     >
-      <h1 className="font-bold text-4xl w-[70%] ">
+      <h1 className="font-bold text-xl md:text-4xl w-full  md:w-[70%] ">
         {data.name || data.title || data.original_name || data.original_title}
       </h1>
-      <p className="w-[70%] mt-1 ">
+      <p className="w-[70%] mt-1 md:block hidden
+       ">
         {data.overview.slice(0, 200)}..
         <span className="text-blue-500">more</span>
       </p>
-      <div className="flex gap-6 mt-2">
+      <div className="flex gap-6 md:mt-2">
         <h2 className="flex  items-center gap-2">
           <span className="text-yellow-500 ">
             <HiSpeakerWave />

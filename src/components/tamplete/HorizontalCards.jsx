@@ -2,14 +2,14 @@ import React from "react";
 
 const HorizontalCards = ({ HorizontalCardsData }) => {
   return (
-    <div className="px-4 py-2 w-full h-[40vh] ">
+    <div className="md:px-4 py-2 w-full h-[40vh]  ">
       
 
       <div className="w-full overflow-x-auto flex   snap-x snap-mandatory custom-scroll  gap-5">
         {HorizontalCardsData.map((CardsData, index) => (
-          <div key={index} className=" min-w-[20%] text-white mt-2.5 bg-zinc-900 hover:bg-zinc-700 pb-1 ">
+          <div key={index} className="min-w-[70%]  md:min-w-[20%] text-white mt-2.5 bg-zinc-900 hover:bg-zinc-700 pb-1 ">
             <img
-              className="w-full h-[16vh]  "
+              className="w-full h-[25vh] md:h-[16vh]  "
               src={`https://image.tmdb.org/t/p/original/${
                 CardsData.backdrop_path ||
                 CardsData.profile_path ||
