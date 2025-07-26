@@ -8,7 +8,6 @@ import noimage from "/noimage.webp"
 const TopNavigation = () => {
   const [query, setquery] = useState("");
   const [searches, setSearches] = useState([]);
-  console.log(searches);
 
   const getSearches = async () => {
     try {
@@ -24,7 +23,7 @@ const TopNavigation = () => {
   }, [query]);
 
   return (
-    <div className=" ml-[15%] h-[10vh] relative flex items-center gap-4 justify-cente w-full ">
+    <div className=" ml-[15%] h-[10vh]  relative flex items-center gap-4 justify-cente w-full">
       <span className="text-[24px]">
         <CiSearch />
       </span>
@@ -45,7 +44,7 @@ const TopNavigation = () => {
         {searches.map((search, index) => (
           <Link key={index} className="bg-[#E4E4E6]  hover:bg-[#D6D6DA] hover:text-zinc-800 text-zinc-600 font-semibold capitalize border-white border-b  w-full flex items-center p-8 ">
             <img
-            className="w-[15vh] shadow-lg h-[15vh] rounded mr-5  object-cover "
+            className="w-[15vh] shadow-lg h-[15vh] rounded mr-5 object-center  object-cover "
               src={search.backdrop_path || 
                 search.profile_path ? `https://image.tmdb.org/t/p/original/${
                 search.backdrop_path || search.profile_path

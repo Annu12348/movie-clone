@@ -22,7 +22,7 @@ const SizeNavigation = () => {
         <h1 className="text-xl  tracking-tight leading-none font-semibold capitalize text-white">
           new feeds
         </h1>
-        <Link className="duration-300 hover:bg-blue-500 hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400 mt-2">
+        <Link to='/tranding' className="duration-300 hover:bg-blue-500 hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400 mt-2">
           <i className="ri-landscape-ai-fill"></i>
           <span>tranding</span>
         </Link>

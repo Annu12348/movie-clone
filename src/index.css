@@ -13,3 +13,12 @@
 ::-webkit-scrollbar-thumb:hover{
     background-color: blue;
 }
+
+.custom-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .custom-scroll {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
