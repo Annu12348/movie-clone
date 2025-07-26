@@ -44,11 +44,11 @@ const TopNavigation = () => {
         </span>
       )}
 
-      <div className="w-[55%] top-[91%] overflow-auto left-[0.5%] rounded bg-zinc-50  absolute max-h-[50vh] ">
+      <div className="md:w-[55%] w-[85%] top-[91%] overflow-auto  left-[0.5%] rounded bg-zinc-50  absolute max-h-[35vh] md:max-h-[50vh] ">
         {searches.map((search, index) => (
-          <Link key={index} className="bg-[#E4E4E6]  hover:bg-[#D6D6DA] hover:text-zinc-800 text-zinc-600 font-semibold capitalize border-white border-b  w-full flex items-center p-8 ">
+          <Link key={index} className="bg-[#E4E4E6]  hover:bg-[#D6D6DA] hover:text-zinc-800 text-zinc-600 font-semibold capitalize border-white border-b  w-full flex items-center p-2 md:p-8 ">
             <img
-            className="w-[15vh] shadow-lg h-[15vh] rounded mr-5 object-center  object-cover "
+            className="md:w-[15vh] w-[9vh] shadow-lg md:h-[15vh] h-[9vh] rounded mr-5 object-center  object-cover "
               src={search.backdrop_path || 
                 search.profile_path ? `https://image.tmdb.org/t/p/original/${
                 search.backdrop_path || search.profile_path
