@@ -26,15 +26,15 @@ const SizeNavigation = () => {
           <i className="ri-landscape-ai-fill"></i>
           <span>tranding</span>
         </Link>
-        <Link className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
+        <Link to="/popular" className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
           <i className="ri-bard-fill"></i>
           <span>popular</span>
         </Link>
-        <Link className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
+        <Link to="/movie" className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
           <RiMovie2Line />
           <span>movies</span>
         </Link>
-        <Link className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
+        <Link to="/tv-show" className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
           <IoTvSharp />
           <span>tv shows</span>
         </Link>

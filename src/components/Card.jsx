@@ -5,7 +5,7 @@ function Card({ title, data }) {
   return (
     <div className="text-white w-full justify-center min-h-screen mt-1 flex items-start gap-5 flex-wrap ">
       {data.map((s, i) => (
-        <Link to="/tranding" key={i} className="w-[40vh] mt-8 rounded-lg shadow ">
+        <Link  key={i} className="w-[40vh] mt-8 rounded-lg shadow ">
           <div className="w-full bg-amber-100 rounded-t-lg h-[58vh] overflow-hidden ">
             <img
               className="w-full h-full object-cover  "
