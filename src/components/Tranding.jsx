@@ -20,7 +20,7 @@ const Tranding = () => {
   const gettranding = async () => {
     try {
       const { data } = await axios.get(`/trending/${category}/${duration}?page=${page}`);
-      
+      console.log(data.results)
 
       if (data.results.length > 0) {
         setTranding((prevState) => [...prevState, ...data.results]);

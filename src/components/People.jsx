@@ -8,21 +8,21 @@ import Selector from "./tamplete/Selector";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Card from "./Card";
 
-const TvShow = () => {
+const People = () => {
   const navigate = useNavigate();
   document.title = "SSCDB | TV-Shows"
-  const [category, setCategory] = useState("airing_today");
-  const [TVShow, setTVShow] = useState([]);
+  const [category, setCategory] = useState("popular");
+  const [person, setPerson] = useState([]);
   const [page, setPage] = useState(1);
   const [asMore, setAsMore] = useState(true);
 
-  const getTVShow = async () => {
+  const getPerson = async () => {
     try {
-      const { data } = await axios.get(`/tv/${category}?page=${page}`);
-      console.log(data);
+      const { data } = await axios.get(`/person/${category}?page=${page}`);
+      console.log(data.results);
 
       if (data.results.length > 0) {
-        setTVShow((prevState) => [...prevState, ...data.results]);
+        setPerson((prevState) => [...prevState, ...data.results]);
         setPage(page + 1);
       } else {
         setAsMore(false);
@@ -33,12 +33,12 @@ const TvShow = () => {
   };
 
   const referenceHandler = async () => {
-    if (TVShow.length === 0) {
-      getTVShow();
+    if (person.length === 0) {
+      getPerson();
     } else {
       setPage(1);
-      setTVShow([]);
-      getTVShow();
+      setPerson([]);
+      getPerson();
     }
   };
 
@@ -46,7 +46,7 @@ const TvShow = () => {
     referenceHandler();
   }, [category]);
 
-  return TVShow.length > 0 ? (
+  return person.length > 0 ? (
     <div className="p-4 min-h-screen w-full ">
       <div className="flex items-center">
         <div className="flex items-center gap-2">
@@ -57,30 +57,22 @@ const TvShow = () => {
             <GoArrowLeft />
           </span>
           <h1 className="text-white capitalize text-xl tracking-tight font-semibold ">
-            movies<span className="text-[12px] text-zinc-500 ml-1 t ">({category})</span>
+            people<span className="text-[12px] text-zinc-500 ml-1 t ">({category})</span>
           </h1>
         </div>
         <div className="w-full flex items-center justify-between">
           <div className="w-[70%] text-zinc-300">
             <TopNavigation />
           </div>
-          
-            <Selector
-            
-              title="category"
-              option={["popular", "top_rated", "on_the_air", "airing_today"]}
-              funct={(e) => setCategory(e.target.value)}
-            />
-          
         </div>
       </div>
       <InfiniteScroll
-        dataLength={TVShow.length}
+        dataLength={person.length}
         loader={<h4>Loading...</h4>}
         hasMore={asMore}
-        next={getTVShow}
+        next={getPerson}
       >
-        <Card title={category} data={TVShow} />
+        <Card title={category} data={person} />
       </InfiniteScroll>
     </div>
   ) : (
@@ -88,4 +80,4 @@ const TvShow = () => {
   );
 };
 
-export default TvShow;
+export default People;

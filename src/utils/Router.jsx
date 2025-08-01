@@ -5,6 +5,7 @@ import Tranding from "../components/Tranding";
 import Popular from "../components/Popular";
 import Movie from "../components/Movie";
 import TvShow from "../components/TvShow";
+import People from "../components/People";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
       <Route path="/popular" element={<Popular />} />
       <Route path="/movie" element={<Movie />} />
       <Route path="/tv-show" element={<TvShow />} />
+      <Route path="/person" element={<People />} />
     </Routes>
   );
 };
