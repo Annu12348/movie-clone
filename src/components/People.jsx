@@ -19,7 +19,6 @@ const People = () => {
   const getPerson = async () => {
     try {
       const { data } = await axios.get(`/person/${category}?page=${page}`);
-      console.log(data.results);
 
       if (data.results.length > 0) {
         setPerson((prevState) => [...prevState, ...data.results]);
@@ -72,7 +71,7 @@ const People = () => {
         hasMore={asMore}
         next={getPerson}
       >
-        <Card title={category} data={person} />
+        <Card title='person' data={person} />
       </InfiniteScroll>
     </div>
   ) : (

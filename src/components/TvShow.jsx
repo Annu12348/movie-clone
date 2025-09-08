@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import Loading from "./Loading";
 import axios from "../utils/axios";
 import { GoArrowLeft } from "react-icons/go";
@@ -19,7 +19,7 @@ const TvShow = () => {
   const getTVShow = async () => {
     try {
       const { data } = await axios.get(`/tv/${category}?page=${page}`);
-      console.log(data);
+      
 
       if (data.results.length > 0) {
         setTVShow((prevState) => [...prevState, ...data.results]);
@@ -56,8 +56,8 @@ const TvShow = () => {
           >
             <GoArrowLeft />
           </span>
-          <h1 className="text-white capitalize text-xl tracking-tight font-semibold ">
-            movies<span className="text-[12px] text-zinc-500 ml-1 t ">({category})</span>
+          <h1 className="text-white capitalize text-md tracking-tight font-semibold ">
+            TVShows<span className="text-[12px] text-zinc-500 ml-1 t ">({category})</span>
           </h1>
         </div>
         <div className="w-full flex items-center justify-between">
@@ -80,7 +80,7 @@ const TvShow = () => {
         hasMore={asMore}
         next={getTVShow}
       >
-        <Card title={category} data={TVShow} />
+        <Card title="tv" data={TVShow} />
       </InfiniteScroll>
     </div>
   ) : (

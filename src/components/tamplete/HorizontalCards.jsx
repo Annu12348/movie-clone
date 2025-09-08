@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HorizontalCards = ({ HorizontalCardsData }) => {
   return (
@@ -7,7 +8,7 @@ const HorizontalCards = ({ HorizontalCardsData }) => {
 
       <div className="w-full overflow-x-auto flex   snap-x snap-mandatory custom-scroll  gap-5">
         {HorizontalCardsData.map((CardsData, index) => (
-          <div key={index} className="min-w-[70%]  md:min-w-[20%] text-white mt-2.5 bg-zinc-900 hover:bg-zinc-700 pb-1 ">
+          <Link to={`/${CardsData.media_type}/details/${CardsData.id}`} key={index} className="min-w-[70%]  md:min-w-[20%] text-white mt-2.5 bg-zinc-900 hover:bg-zinc-700 pb-1 ">
             <img
               className="w-full h-[25vh] md:h-[16vh]  "
               src={`https://image.tmdb.org/t/p/original/${
@@ -29,7 +30,7 @@ const HorizontalCards = ({ HorizontalCardsData }) => {
               {CardsData.overview.slice(0, 113)}...
               <span className="text-blue-500">more</span>
             </p>
-          </div>
+          </Link>
         ))}
         
       </div>
