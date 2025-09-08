@@ -7,7 +7,7 @@ import Movie from "../components/Movie";
 import TvShow from "../components/TvShow";
 import People from "../components/People";
 import MovieDetails from "../components/MovieDetails";
-import TVDetails from "../components/tvDetails";
+import TVDetails from "../components/TVDetails";
 import PersonDetails from "../components/PersonDetails";
 
 const Router = () => {
