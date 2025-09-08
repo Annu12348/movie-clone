@@ -34,7 +34,7 @@ const SizeNavigation = () => {
           <RiMovie2Line />
           <span>movies</span>
         </Link>
-        <Link to="/tv-show" className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
+        <Link to="/tv" className="duration-300 hover:bg-blue-500 items-center hover:text-white hover:font-semibold capitalize font-semibold w-full flex p-5 rounded gap-2 text-xl text-zinc-400">
           <IoTvSharp />
           <span>tv shows</span>
         </Link>
