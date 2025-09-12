@@ -39,26 +39,3 @@ const HorizontalCards = ({ HorizontalCardsData }) => {
 };
 
 export default HorizontalCards;
-
-{
-  /*HorizontalCardsData.map((cards, index) => {
-          return (
-            <div key={index} className="min-w-[17%] mt-3 hover:bg-zinc-800  bg-zinc-900  ">
-              <img
-                className="w-full h-[16vh]"
-                src={`https://image.tmdb.org/t/p/original/${
-                  cards.backdrop_path || cards.profile_path
-                }`}
-                alt="images show only"
-              />
-              <h1 className="text-[15px] mt-2 tracking-tight leading-none font-semibold ">
-                {(cards.name ||
-                  cards.title ||
-                  cards.original_name ||
-                  cards.original_title).slice(0, 31)}
-              </h1>
-              <p className="mt-1 pb-2 tracking-tight leading-5">{cards.overview.slice(0, 113)}...<span className="text-blue-500">more</span></p>
-            </div>
-          );
-        })*/
-}

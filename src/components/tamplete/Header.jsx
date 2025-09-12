@@ -7,14 +7,14 @@ const Header = ({ data }) => {
   
   return (
     <div
-      style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${
-          data.backdrop_path || data.profile_path
-        })`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-        backgroundRepeat: "no-repeat",
-      }}
+    style={{
+      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${
+        data.backdrop_path || data.profile_path
+      })`,
+      backgroundSize: "cover",
+      backgroundPosition: "top",
+      backgroundRepeat: "no-repeat",
+    }}
       className="w-full h-[30%] md:rounded-none rounded-lg md:h-[50%] bg-zinc-200 p-2 md:p-10 flex flex-col justify-end  "
     >
       <h1 className="font-bold text-xl md:text-4xl w-full  md:w-[70%] ">

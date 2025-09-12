@@ -50,6 +50,7 @@ const TopNavigation = () => {
       <div className="md:w-[55%] w-[85%] top-[91%] overflow-auto  left-[0.5%] rounded bg-zinc-50  absolute max-h-[35vh] md:max-h-[50vh] ">
         {searches.map((search, index) => (
           <Link
+          to={`/${search.media_type}/details/${search.id}`}
             key={index}
             className="bg-[#E4E4E6]  hover:bg-[#D6D6DA] hover:text-zinc-800 text-zinc-600 font-semibold capitalize border-white border-b  w-full flex items-center p-2 md:p-8 "
           >
