@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { asyncloadmovie } from "../store/actions/movieActions";
 import Loading from "./Loading";
 import { IoIosPlay } from "react-icons/io";
-import HorizontalCards from "../components/tamplete/HorizontalCards"
+import HorizontalCards from "../components/tamplete/HorizontalCards";
 
 const MovieDetails = () => {
   const { pathname } = useLocation();
@@ -36,7 +36,7 @@ const MovieDetails = () => {
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-screen h-[140vh] px-[8%]"
+      className="w-screen  h-[148vh] px-[8%] "
     >
       <nav className="w-full text-zinc-200 flex items-center gap-4 py-4">
         <button
@@ -127,7 +127,7 @@ const MovieDetails = () => {
           </p>
 
           <Link
-            to={`${pathname}/trailler`}
+            to={`${pathname}/trailer`}
             className="bg-blue-800 px-3 gap-2 py-3 flex flex-row-reverse w-fit items-center justify-center rounded-md font-semibold capitalize text-white"
           >
             Play Trailler
@@ -201,9 +201,19 @@ const MovieDetails = () => {
         </div>
       </div>
 
-      <HorizontalCards HorizontalCardsData={
-        info.recommendations.results.length > 0 ? info.recommendations.results : info.similar.results
-      } />
+      <hr className="text-white mt-7" />
+      <h1 className="text-white ml-4 mt-5 font-semibold capitalize text-2xl tracking-tight leading-none">recommendations & similar stuff</h1>
+      
+      <HorizontalCards
+        HorizontalCardsData={
+          info.recommendations.results.length > 0
+            ? info.recommendations.results
+            : info.similar.results
+        }
+      />
+
+
+      <Outlet />
     </div>
   );
 };
